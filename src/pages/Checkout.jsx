@@ -1,23 +1,6 @@
 // ============================================================
 // Checkout.jsx
-// Converted from #page-checkout in index.html and
-// renderCheckout(), handleCheckout() in script.js
-// ============================================================
-// Your old checkout page was another empty skeleton filled
-// by jQuery:
-//
-//   renderCheckout() ran when showPage("checkout") was called.
-//   It built checkout item HTML strings, injected them into
-//   #checkoutItems, then set text on 4 totals spans by ID.
-//
-//   handleCheckout() cleared the global cart array, called
-//   updateCartBadge(), then called showPage("payment-success").
-//
-// In React, this is straightforward:
-//   - cart and totals come from CartContext
-//   - Items render with .map()
-//   - handleCheckout clears the cart and navigates to /success
-// ============================================================
+// ============================================================ 
 
 import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
@@ -26,10 +9,7 @@ function Checkout() {
 
   // ----------------------------------------------------------
   // CART DATA FROM CONTEXT
-  // ----------------------------------------------------------
-  // Was: renderCheckout() read the global cart array and called
-  //      getCartTotals() to calculate subtotal, shipping, tax, total.
-  // Now: both come from CartContext — one line
+  // ---------------------------------------------------------- 
   const { cart, totals, clearCart } = useCart();
   const { subtotal, shipping, tax, total } = totals;
 
@@ -37,15 +17,7 @@ function Checkout() {
 
   // ----------------------------------------------------------
   // HANDLE CHECKOUT SUBMIT
-  // ----------------------------------------------------------
-  // Was: function handleCheckout(e) {
-  //        e.preventDefault();
-  //        alert("In production, redirect to Stripe...");
-  //        cart = [];
-  //        updateCartBadge();
-  //        showPage("payment-success");
-  //      }
-  // Now: same logic — clear the cart and navigate to /success
+  // ---------------------------------------------------------- 
   function handleCheckout(e) {
     e.preventDefault();
     alert("In production, you would be redirected to Stripe for secure payment.");
@@ -62,7 +34,7 @@ function Checkout() {
       <div className="container">
 
         {/* Breadcrumb
-            Was: <a onclick="showPage('cart')">← Back to Cart</a> */}
+           */}
         <div className="breadcrumb">
           <Link to="/cart" className="link-primary">← Back to Cart</Link>
         </div>
@@ -147,9 +119,7 @@ function Checkout() {
               <hr className="separator" />
 
               {/* CHECKOUT ITEMS
-                  Was: <div id="checkoutItems"><!-- Populated by JS --></div>
-                       renderCheckout() built HTML strings and injected them here
-                  Now: cart.map() renders each item directly */}
+                   */}
               <div className="checkout-items">
                 {cart.map((item) => (
                   <div key={item.id} className="checkout-item">
@@ -168,9 +138,7 @@ function Checkout() {
               <hr className="separator" />
 
               {/* TOTALS
-                  Was: jQuery("#checkoutSubtotal").text("$" + t.subtotal.toLocaleString())
-                       × 4 individual calls to set each total by ID
-                  Now: values come straight from CartContext totals */}
+                 */}
               <div className="summary-row">
                 <span>Subtotal</span>
                 <span>${subtotal.toLocaleString()}</span>

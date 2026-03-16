@@ -36,8 +36,7 @@ function App() {
           <Route path="/success"     element={<PaymentSuccess />}/>
 
           {/* Catch-all — any URL that doesn't match shows the 404 page
-              Was: showPage("404") had to be called manually.
-              Now: React Router handles it automatically with path="*" */}
+               */}
           <Route path="*"            element={<NotFound />}      />
         </Routes>
 

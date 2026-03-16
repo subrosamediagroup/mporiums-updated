@@ -9,10 +9,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 import ProductCard from "../components/ProductCard";
 
-// Your products array — move this from script.js into its own file.
-// Create src/data/products.js and paste the var products = [...] array
-// in there as:  export default products;
-// Then import it here like this:
+// Your products array 
 import products from "../data/products";
 
 // ============================================================
@@ -26,10 +23,7 @@ const categories = [
   { name: "Microphones",        icon: "/icons/mic.svg",        count: "2,900+" },
   { name: "DJ Equipment",       icon: "/icons/music.svg",      count: "3,400+" },
 ];
-
-// ============================================================
-// How It Works steps data
-// ============================================================
+ 
 const steps = [
   { number: "1", icon: "/icons/camera.svg", title: "List Your Gear",    desc: "Snap photos, set your price, and publish in minutes." },
   { number: "2", icon: "/icons/tag.svg",    title: "Buyers Discover",   desc: "Your listing reaches thousands of gear enthusiasts instantly." },

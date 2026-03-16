@@ -1,28 +1,8 @@
 // ============================================================
 // Account.jsx
-// Converted from #page-account in index.html and
-// handleSaveProfile() in script.js
+
 // ============================================================
-// The account page is the simplest remaining page — it's
-// mostly a static form. Your old script.js only had one
-// function for it:
-//
-//   function handleSaveProfile(e) {
-//     e.preventDefault();
-//     alert("Profile saved! (Requires backend integration)");
-//   }
-//
-// In React the conversion is straightforward:
-//   - All form inputs become controlled with useState
-//   - onsubmit="handleSaveProfile(event)" → onSubmit={handleSaveProfile}
-//   - class="" → className=""
-//   - The purchase history section stays as-is (empty state for now)
-//
-// In a real app with a backend, you would:
-//   1. Fetch the user's saved profile on load with useEffect
-//   2. Pre-fill the inputs with the fetched data
-//   3. POST the form data to your API on submit
-// ============================================================
+
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -38,15 +18,9 @@ function Account() {
   }
 
   // ----------------------------------------------------------
-  // STATE — one object holding all form field values
+  // STATE —
   // ----------------------------------------------------------
-  // Was: plain HTML inputs with no JS tracking their values.
-  //      handleSaveProfile() just showed an alert — it never
-  //      actually read any of the input values.
-  //
-  // Now: all inputs are controlled — React tracks every value.
-  //      When you connect a real backend, you just read from
-  //      this state object and POST it to your API.
+
   const [profile, setProfile] = useState({
     displayName: "",
     firstName: "",
@@ -59,19 +33,13 @@ function Account() {
   });
 
   // Saved confirmation message
-  // Shows briefly after clicking Save Changes — nicer than an alert
+
   const [saved, setSaved] = useState(false);
 
   // ----------------------------------------------------------
   // HELPER — update a single field in the profile object
   // ----------------------------------------------------------
-  // Instead of writing a separate onChange handler for each input,
-  // this one function handles all of them.
-  // e.target.name matches the name="" attribute on each input.
-  // e.target.value is what the user typed.
-  //
-  // The ...profile spread keeps all the other fields intact —
-  // we only update the one field that changed.
+ 
   function handleChange(e) {
     setProfile({ ...profile, [e.target.name]: e.target.value });
   }
@@ -79,17 +47,11 @@ function Account() {
   // ----------------------------------------------------------
   // SAVE PROFILE
   // ----------------------------------------------------------
-  // Was: function handleSaveProfile(e) {
-  //        e.preventDefault();
-  //        alert("Profile saved! (Requires backend integration)");
-  //      }
-  // Now: same placeholder, but we show an inline confirmation
-  //      instead of a browser alert, and the profile state is
-  //      ready to be sent to a real API when you add one.
+  
   function handleSaveProfile(e) {
     e.preventDefault();
     // In production: POST profile data to your backend here
-    // e.g. await fetch("/api/profile", { method: "POST", body: JSON.stringify(profile) })
+    
     setSaved(true);
     setTimeout(() => setSaved(false), 3000); // hide after 3 seconds
   }
@@ -107,8 +69,7 @@ function Account() {
           Manage your profile, payment info, and view purchase history
         </p>
 
-        {/* Was: <form onsubmit="handleSaveProfile(event)" class="account-form">
-            Now: onSubmit={handleSaveProfile} className="account-form" */}
+        {/*  */}
         <form onSubmit={handleSaveProfile} className="account-form">
 
           {/* ── PROFILE CARD ── */}
@@ -123,9 +84,7 @@ function Account() {
             </h2>
             <hr className="separator" />
 
-            {/* Email — disabled, cannot be changed
-                Was: <input value="user@example.com" disabled>
-                In a real app, you'd populate this from the logged-in user's data */}
+            {/*  */}
             <div className="form-group">
               <label>Email</label>
               <input
@@ -138,9 +97,7 @@ function Account() {
               <p className="text-xs text-muted">Email cannot be changed here</p>
             </div>
 
-            {/* Controlled inputs — value comes from profile state,
-                onChange calls handleChange which updates only that field.
-                name="" must match the key in the profile state object. */}
+            {/* Controlled inputs  */}
             <div className="form-group">
               <label>Display Name</label>
               <input
@@ -263,11 +220,7 @@ function Account() {
             </div>
           </div>
 
-          {/* SAVE BUTTON + inline confirmation
-              Was: <button type="submit">💾 Save Changes</button>
-                   followed by an alert() popup
-              Now: button submits the form, a brief "Saved!" message
-                   appears below it for 3 seconds then disappears */}
+          {/* SAVE BUTTON  */}
           <button type="submit" className="btn btn-primary btn-lg">
             💾 Save Changes
           </button>
@@ -281,9 +234,7 @@ function Account() {
         </form>
 
         {/* ── PURCHASE HISTORY ── */}
-        {/* Was: <div id="purchaseHistory"> with a static empty state inside
-            In a real app, you'd fetch orders from your backend here with useEffect
-            and map over them. For now we show the same empty state. */}
+        {/*  */}
         <div className="purchase-history">
           <div className="form-card">
             <h2 className="form-card-title">
@@ -303,7 +254,7 @@ function Account() {
               <p className="text-muted text-xs">
                 Your order history will appear here after your first purchase.
               </p>
-              {/* Was: onclick="showPage('shop')" */}
+              {/*  */}
               <Link
                 to="/shop"
                 className="btn btn-outline btn-sm"

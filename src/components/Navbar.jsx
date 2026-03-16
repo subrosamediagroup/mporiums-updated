@@ -2,10 +2,9 @@
 // Navbar.jsx
 // ============================================================
 
-// STEP 1: Import React and useState, useEffect
-import { useState, useEffect } from "react";
 
-// STEP 2: Import Link and useNavigate from React Router
+
+import { useState, useEffect } from "react";
 
 import { Link, useNavigate } from "react-router-dom";
 

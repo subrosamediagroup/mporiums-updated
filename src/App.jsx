@@ -1,6 +1,5 @@
 // ============================================================
 // App.jsx — COMPLETE FINAL VERSION
-// Every page and route wired up
 // ============================================================
 
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";

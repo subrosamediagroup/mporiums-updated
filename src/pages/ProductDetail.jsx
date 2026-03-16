@@ -1,7 +1,6 @@
 // ============================================================
 // ProductDetail.jsx
-// ============================================================
-// ============================================================
+// ============================================================ 
 
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
@@ -218,7 +217,7 @@ function ProductDetail() {
 
             {/* ── SELLER CARD ──
                 */}
-            <div className="seller-card" style={{ maxWidth: "1120px", marginLeft: "auto", marginRight: "auto" }}>
+            <div className="seller-card" style={{ maxWidth: "1120px" }}>
               <h3 className="filter-title">Seller</h3>
               <div className="seller-info">
 
@@ -300,9 +299,7 @@ function ProductDetail() {
           className="modal-overlay"
           onClick={closeOfferModal}
         >
-          {/* stopPropagation prevents clicking INSIDE the modal
-              from closing it (which would happen if the click
-              bubbled up to the overlay) */}
+          {/*  */}
           <div
             className="modal-content"
             onClick={(e) => e.stopPropagation()}
