@@ -1070,19 +1070,31 @@ img { max-width: 100%; height: auto; display: block; }
     word-break: break-word;
   }
   
-  /* Listing card text truncation fix */
-  .listing-title { 
-    white-space: normal;
-    overflow: visible;
-    text-overflow: clip;
-    line-clamp: 2;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
+  /* Listing cards - better spacing on mobile */
+  .listing-card { 
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-card);
   }
-  .listing-image { 
-    aspect-ratio: 1/1; 
-    overflow: hidden;
+  .listing-body { 
+    padding: 0.75rem; 
+  }
+  .listing-category { 
+    font-size: 0.65rem; 
+    margin-bottom: 0.5rem;
+  }
+  .listing-title {
+    font-size: 0.8rem; 
+    line-height: 1.4;
+    -webkit-line-clamp: 2;
+    margin-bottom: 0.5rem;
+  }
+  .listing-price {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .listing-meta { 
+    font-size: 0.65rem;
+    gap: 0.5rem;
   }
   
   /* Success page */
@@ -1107,6 +1119,11 @@ img { max-width: 100%; height: auto; display: block; }
   .category-grid { grid-template-columns: repeat(3, 1fr); }
   .steps-grid { grid-template-columns: repeat(2, 1fr); }
   .form-grid-2 { grid-template-columns: repeat(2, 1fr); }
+  
+  /* Listing cards - better spacing on tablet */
+  .listing-body { padding: 0.85rem; }
+  .listing-title { font-size: 0.9rem; }
+  .listing-price { font-size: 1.1rem; }
   
   /* Layouts */
   .product-layout { grid-template-columns: 1fr; }

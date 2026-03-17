@@ -189,7 +189,7 @@ function Home() {
                */}
           <div
             className="listing-grid"
-            style={{ maxWidth: "100%", margin: "auto", gridTemplateColumns: "repeat(3, 1fr)" }}
+            style={{ maxWidth: "100%", margin: "auto" }}
           >
             {/* Loop through all products and render a ProductCard for each. */}
             {products.map((product) => (
