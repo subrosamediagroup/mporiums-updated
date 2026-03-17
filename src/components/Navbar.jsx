@@ -129,17 +129,19 @@ function Navbar() {
             )}
           </button>
 
-          {/* WISHLIST */}
-          <Link to="/wishlist" className="btn btn-ghost icon-btn" title="Saved items">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-              fill={wishlist.length > 0 ? "var(--primary)" : "none"}
-              stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
-            </svg>
-            {wishlist.length > 0 && (
-              <span className="cart-badge">{wishlist.length}</span>
-            )}
-          </Link>
+          {/* WISHLIST — only show when logged in */}
+          {isLoggedIn && (
+            <Link to="/wishlist" className="btn btn-ghost icon-btn" title="Saved items">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                fill={wishlist.length > 0 ? "var(--primary)" : "none"}
+                stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+              </svg>
+              {wishlist.length > 0 && (
+                <span className="cart-badge">{wishlist.length}</span>
+              )}
+            </Link>
+          )}
 
           {/* CART */}
           <Link to="/cart" className="btn btn-ghost icon-btn cart-btn">
