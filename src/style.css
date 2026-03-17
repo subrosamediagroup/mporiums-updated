@@ -375,15 +375,15 @@ img { max-width: 100%; height: auto; display: block; }
   position: absolute; left: 0.75rem; top: 0.75rem;
   padding: 0.25rem 0.625rem; border-radius: var(--radius);
   background: hsla(0,0%,100%,0.7); backdrop-filter: blur(8px);
-  font-size: 0.75rem; font-weight: 700; color: var(--foreground);
+  font-size: 0.65rem; font-weight: 700; color: var(--foreground);
 }
 .dark .listing-card .listing-badge { background: hsla(0,0%,0%,0.5); color: hsl(0, 0%, 87%); }
 .listing-card .listing-heart {
   position: absolute; 
   right: 0.75rem; 
   top: 0.75rem;
-  width: 2.5rem; 
-  height: 2.5rem; 
+  width: 2rem; 
+  height: 2rem; 
   display: flex; 
   align-items: center; 
   justify-content: center;
@@ -396,8 +396,6 @@ img { max-width: 100%; height: auto; display: block; }
   transition: color 0.2s; 
   padding: 0; 
   line-height: 1;
-  min-height: 44px;
-  min-width: 44px;
   -webkit-user-select: none;
   user-select: none;
 }
