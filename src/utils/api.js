@@ -27,7 +27,7 @@
 //     VITE_API_URL=https://your-app.railway.app/api  (deployed)
 // ============================================================
 
-const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:4000/api";
+const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5173/api";
 
 export async function apiFetch(path, options = {}) {
   // Attach saved auth token if it exists
