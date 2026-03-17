@@ -244,7 +244,7 @@ function ProductDetail() {
 
                 {/* City, State
                    */}
-                <div style={{ textAlign: "right", fontSize: "0.875rem", color: "var(--muted-foreground)", whiteSpace: "nowrap", minWidth: "150px" }}>
+                <div style={{ textAlign: "right", fontSize: "0.875rem", color: "var(--muted-foreground)", whiteSpace: "nowrap", minWidth: "220px" }}>
                   {product.sellerCity && product.sellerState
                     ? `${product.sellerCity}, ${product.sellerState}`
                     : product.sellerCity || product.sellerState || ""}
