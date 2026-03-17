@@ -237,7 +237,7 @@ function ProductDetail() {
                     <img
                       src="/icons/shield.svg"
                       alt="Verified seller"
-                      style={{ width: "2rem", height: "2rem", marginTop: "2px" }}
+                      style={{ width: "1.25rem", height: "1.25rem", marginLeft: "0.25rem", marginTop: "0" }}
                     />
                   )}
                 </div>
