@@ -148,6 +148,9 @@ img { max-width: 100%; height: auto; display: block; }
   margin-right: auto; 
 }
 .center-content { display: flex; align-items: center; justify-content: center; min-height: calc(100vh - 200px); }
+.home-page {
+  padding: 2rem 0;
+}
 
 /* =============================================
    BUTTONS
@@ -1019,6 +1022,7 @@ img { max-width: 100%; height: auto; display: block; }
   
   /* Hero section */
   .hero { min-height: 60vh; }
+  .home-page { padding-top: 0.75rem; }
   .hero-content { padding: 1rem; }
   .hero-badge { font-size: 0.65rem; padding: 0.25rem 0.75rem; }
   .hero-actions { flex-wrap: wrap; gap: 0.5rem; align-items: stretch; }
@@ -1309,6 +1313,7 @@ img { max-width: 100%; height: auto; display: block; }
   
   /* Search */
   .search-bar { max-width: 22rem; margin: 0 1rem; }
+  .home-page { padding-top: 1rem; }
 
   /* Help Center */
   .help-layout {

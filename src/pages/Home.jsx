@@ -74,7 +74,7 @@ function Home() {
 
   return (
 
-    <main style={{ padding: "2rem 0" }}>
+    <main className="home-page">
 
       {/* ====================================================
           HERO SECTION
