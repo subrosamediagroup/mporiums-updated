@@ -717,6 +717,14 @@ img { max-width: 100%; height: auto; display: block; }
     position: static;
     top: auto;
   }
+
+  .hero {
+    align-items: flex-start;
+  }
+
+  .hero-content {
+    padding-top: 2rem;
+  }
 }
 
 /* =============================================
@@ -1021,9 +1029,9 @@ img { max-width: 100%; height: auto; display: block; }
   .mobile-search input { font-size: 0.9rem; padding: 0.5rem 2rem; }
   
   /* Hero section */
-  .hero { min-height: 60vh; }
+  .hero { min-height: 60vh; align-items: flex-start; }
   .home-page { padding-top: 0.75rem; }
-  .hero-content { padding: 1rem; }
+  .hero-content { padding: 1.75rem 1rem 1rem; }
   .hero-badge { font-size: 0.65rem; padding: 0.25rem 0.75rem; }
   .hero-actions { flex-wrap: wrap; gap: 0.5rem; align-items: stretch; }
   .hero-search { flex: 1; min-width: 160px; max-width: 100%; }
@@ -1303,6 +1311,8 @@ img { max-width: 100%; height: auto; display: block; }
   /* Typography */
   .product-title { font-size: 1.5rem; }
   .product-price { font-size: 1.875rem; }
+  .hero { align-items: flex-start; }
+  .hero-content { padding-top: 2.25rem; }
   
   /* Seller info on tablet */
   .seller-info { grid-template-columns: auto minmax(0, 1fr) auto; }
