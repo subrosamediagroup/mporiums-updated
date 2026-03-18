@@ -214,7 +214,7 @@ function ProductDetail() {
 
             {/* ── SELLER CARD ──
                 */}
-            <div className="seller-card" style={{ maxWidth: "1120px" }}>
+            <div className="seller-card" style={{ maxWidth: "1120px", marginTop: "calc(0.75rem + 15px)" }}>
               <h3 className="filter-title">Seller</h3>
               <div className="seller-info">
 
