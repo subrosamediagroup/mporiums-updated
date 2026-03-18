@@ -1,10 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-  <rect width="48" height="48" rx="12" fill="#E3232C" fill-opacity="0.1"/>
-  <g transform="translate(12 12)" stroke="#E3232C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
-    <circle cx="18" cy="5" r="3"/>
-    <circle cx="6" cy="12" r="3"/>
-    <circle cx="18" cy="19" r="3"/>
-    <line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/>
-    <line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 48 48">
+  <!-- Generator: Adobe Illustrator 29.3.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 151)  -->
+  <defs>
+    <style>
+      .st0 {
+        display: none;
+        fill: #e3232c;
+        fill-opacity: .1;
+      }
+
+      .st1 {
+        fill: none;
+        stroke: #e3232c;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <rect class="st0" width="48" height="48" rx="12" ry="12"/>
+  <g>
+    <circle class="st1" cx="30" cy="17" r="3"/>
+    <circle class="st1" cx="18" cy="24" r="3"/>
+    <circle class="st1" cx="30" cy="31" r="3"/>
+    <line class="st1" x1="20.6" y1="25.5" x2="27.4" y2="29.5"/>
+    <line class="st1" x1="27.4" y1="18.5" x2="20.6" y2="22.5"/>
   </g>
 </svg>
