@@ -2,8 +2,9 @@
 // Sell.jsx
 // ============================================================ 
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 // Sell categories and conditions 
 const sellCategories = [
@@ -41,27 +42,11 @@ function Sell() {
   const [sellDescription, setSellDescription] = useState("");
  
   const [sellerType, setSellerType] = useState("standard");
-  const [isSignedIn, setIsSignedIn] = useState(false);
+  const { isLoggedIn } = useAuth();
 
   const fileInputRef = useRef(null);
 
   const navigate = useNavigate();
-
-  useEffect(() => {
-    const checkAuth = () => {
-      const token =
-        localStorage.getItem("token") ||
-        localStorage.getItem("accessToken") ||
-        localStorage.getItem("sb-access-token");
-      const user =
-        localStorage.getItem("user") ||
-        localStorage.getItem("mporiumsUser");
-      setIsSignedIn(Boolean(token || user));
-    };
-    checkAuth();
-    window.addEventListener("storage", checkAuth);
-    return () => window.removeEventListener("storage", checkAuth);
-  }, []);
 
   // ----------------------------------------------------------
   // FEE CALCULATOR
@@ -176,7 +161,7 @@ function Sell() {
         </div>
 
         {/* Sign in required notice — only shown when NOT signed in */}
-        {!isSignedIn && (
+        {!isLoggedIn && (
           <div className="signin-required-box">
             <p className="signin-required-text">You need to sign in to list items.</p>
             <Link to="/auth" className="btn btn-primary">Sign In / Sign Up</Link>
