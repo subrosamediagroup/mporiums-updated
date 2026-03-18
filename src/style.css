@@ -642,11 +642,13 @@ img { max-width: 100%; height: auto; display: block; }
   border-radius: var(--radius); border: 1px solid var(--border);
   background: var(--card); padding: 1rem; margin-top: 0.75rem;
 }
-.seller-info { display: grid; grid-template-columns: auto 1fr auto; gap: 0.75rem; margin-top: 0.75rem; align-items: flex-start; min-width: 0; }
+.seller-info { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 0.75rem; margin-top: 0.75rem; align-items: center; min-width: 0; }
 .seller-name img { display: inline-block; vertical-align: bottom; margin-right: 0.5rem; margin-top: .25rem; }
 .seller-avatar { width: 2.5rem; height: 2.5rem; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: hsla(0,78%,50%,0.1); 
   font-family: var(--font-display); font-size: 0.8rem; font-weight: 700; color: var(--primary); }
-.seller-name { font-family: var(--font-display); font-weight: 600; color: var(--foreground); display: flex; align-items: center; gap: 0.5rem; justify-content: space-between; }
+.seller-name { font-family: var(--font-display); font-weight: 600; color: var(--foreground); display: flex; align-items: center; gap: 0.5rem; min-width: 0; }
+.seller-name a { min-width: 0; }
+.seller-location { text-align: right; font-size: 0.875rem; color: var(--muted-foreground); white-space: nowrap; min-width: max-content; }
 .seller-meta { display: flex; gap: 0.5rem; font-size: 0.75rem; color: var(--muted-foreground); }
 
 /* =============================================
@@ -1049,9 +1051,9 @@ img { max-width: 100%; height: auto; display: block; }
   /* Seller info */
   .seller-card { padding: 1rem; margin-top: 1rem; border-radius: 0.5rem; }
   .seller-info { 
-    grid-template-columns: 1fr;
+    grid-template-columns: auto minmax(0, 1fr) auto;
     gap: 0.75rem;
-    align-items: flex-start;
+    align-items: center;
   }
   .seller-avatar { 
     width: 2.5rem; 
@@ -1059,15 +1061,12 @@ img { max-width: 100%; height: auto; display: block; }
     flex-shrink: 0;
   }
   .seller-name { 
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.25rem;
-    word-break: break-word;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 0;
   }
-  .seller-meta { 
-    flex-wrap: wrap;
-    word-break: break-word;
-  }
+  .seller-location { min-width: 0; font-size: 0.8rem; }
   
   /* Listing cards - better spacing on mobile */
   .listing-card { 
@@ -1137,7 +1136,7 @@ img { max-width: 100%; height: auto; display: block; }
   .product-price { font-size: 1.875rem; }
   
   /* Seller info on tablet */
-  .seller-info { grid-template-columns: 1fr; }
+  .seller-info { grid-template-columns: auto minmax(0, 1fr) auto; }
   
   /* Buttons */
   .btn { min-height: 44px; }
