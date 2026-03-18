@@ -74,10 +74,6 @@ const FAQ = [
     a: "Preferred Sellers are verified, high-reputation sellers who receive a lower transaction fee (2.99% vs 3.19%) and a badge on their profile that increases buyer trust.",
   },
   {
-    q: "Can I sell internationally?",
-    a: "Yes. You can offer international shipping on any listing. Set your shipping rates per region when creating your listing.",
-  },
-  {
     q: "How do I cancel an order?",
     a: "Contact the seller directly through the messaging system as soon as possible. If the item hasn't shipped yet, most sellers will cancel without issue. Once shipped, you'll need to wait for delivery and then request a return.",
   },
@@ -302,7 +298,6 @@ function HelpCenter() {
                   { title: "Free shipping", desc: "Orders over $500 automatically qualify for free shipping. Look for the Free Shipping badge on qualifying listings.", icon: "🎁" },
                   { title: "Flat rate shipping", desc: "Orders under $500 have a flat rate of $14.99. The seller packs and ships within 1–3 business days.", icon: "📮" },
                   { title: "Seller-set rates", desc: "Some sellers set custom shipping rates, especially for large or heavy items like studio monitors and pianos.", icon: "⚖️" },
-                  { title: "International", desc: "International shipping is available on select listings. Rates and delivery times vary by destination.", icon: "🌍" },
                 ].map((item) => (
                   <div key={item.title} style={cardStyle}>
                     <div style={{ fontSize: "1.25rem", marginBottom: "0.4rem" }}>{item.icon}</div>
