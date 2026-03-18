@@ -33,17 +33,17 @@ function ProductDetail() {
   // ----------------------------------------------------------
   // STATE
   // ----------------------------------------------------------
-
+                <img src="/icons/message-square.svg" alt="Message" style={{ width: "2rem", height: "2rem" }} />
   const [activeImageIndex, setActiveImageIndex] = useState(0);
 
   const [offerModalOpen, setOfferModalOpen] = useState(false);
 
-  // Offer form values
+                <img src="/icons/heart.svg" alt="Save" style={{ width: "2rem", height: "2rem" }} />
   const [offerAmount, setOfferAmount] = useState("");
   const [offerMessage, setOfferMessage] = useState("");
 
   // Added to cart confirmation
-  const [addedToCart, setAddedToCart] = useState(false);
+                <img src="/icons/share-2.svg" alt="Share" style={{ width: "2rem", height: "2rem" }} />
 
   // ----------------------------------------------------------
   // HANDLE PRODUCT NOT FOUND
@@ -272,17 +272,17 @@ function ProductDetail() {
                 className="btn btn-outline btn-sm btn-blue-hover"
                 onClick={openOfferModal}
               >
-                <img src="/icons/message-square-white.svg" alt="Message" style={{ width: "2rem", height: "2rem" }} />
+                <img src="/icons/message-square.svg" alt="Message" style={{ width: "2rem", height: "2rem" }} />
                 Make Offer
               </button>
 
               <button className="btn btn-outline btn-sm btn-blue-hover">
-                <img src="/icons/heart-white.svg" alt="Save" style={{ width: "2rem", height: "2rem" }} />
+                <img src="/icons/heart.svg" alt="Save" style={{ width: "2rem", height: "2rem" }} />
                 Save
               </button>
 
               <button className="btn btn-outline btn-sm btn-blue-hover">
-                <img src="/icons/share-2-white.svg" alt="Share" style={{ width: "2rem", height: "2rem" }} />
+                <img src="/icons/share-2.svg" alt="Share" style={{ width: "2rem", height: "2rem" }} />
                 Share
               </button>
             </div>
