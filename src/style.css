@@ -720,6 +720,7 @@ img { max-width: 100%; height: auto; display: block; }
 
   .hero {
     align-items: flex-start;
+    min-height: 62vh;
   }
 
   .hero-content {
@@ -1029,7 +1030,7 @@ img { max-width: 100%; height: auto; display: block; }
   .mobile-search input { font-size: 0.9rem; padding: 0.5rem 2rem; }
   
   /* Hero section */
-  .hero { min-height: 60vh; align-items: flex-start; }
+  .hero { min-height: 52vh; align-items: flex-start; }
   .home-page { padding-top: 0.75rem; }
   .hero-content { padding: 1.75rem 1rem 1rem; }
   .hero-badge { font-size: 0.65rem; padding: 0.25rem 0.75rem; }
@@ -1234,6 +1235,9 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 @media (max-width: 480px) {
+  .hero {
+    min-height: 46vh;
+  }
   .help-sidebar-card {
     display: flex;
     flex-direction: column;
