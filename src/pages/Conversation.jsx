@@ -157,7 +157,7 @@ function Conversation() {
                 />
               ) : (
                 <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <img src="/icons/camera.svg" alt="No product image" style={{ width: "1rem", height: "1rem", opacity: 0.6 }} />
+                  <img src="/icons/camera.svg" alt="No product image" style={{ width: "1.1rem", height: "1.1rem", opacity: 0.6 }} />
                 </div>
               )}
             </div>

@@ -147,7 +147,7 @@ function EditListing() {
                     <div key={i} className="upload-thumb">
                       <img src={src} alt={`Photo ${i + 1}`} />
                       <button className="remove-thumb" onClick={() => removeImage(i)} aria-label="Remove image">
-                        <img src="/icons/x.svg" alt="Remove" style={{ width: "0.7rem", height: "0.7rem" }} />
+                        <img src="/icons/x.svg" alt="Remove" style={{ width: "0.9rem", height: "0.9rem" }} />
                       </button>
                       {i === 0 && (
                         <span style={{

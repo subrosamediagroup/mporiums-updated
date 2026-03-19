@@ -209,7 +209,7 @@ function Account() {
             </h2>
             <hr className="separator" />
             <div className="info-box">
-              <img src="/icons/credit-card.svg" alt="Payment" style={{ width: "1rem", height: "1rem", flexShrink: 0 }} />
+              <img src="/icons/credit-card.svg" alt="Payment" style={{ width: "1.15rem", height: "1.15rem", flexShrink: 0 }} />
               <div>
                 <p className="info-box-title">Payments handled by Stripe</p>
                 <p className="text-xs text-muted">
@@ -222,14 +222,14 @@ function Account() {
 
           {/* SAVE BUTTON  */}
           <button type="submit" className="btn btn-primary btn-lg">
-            <img src="/icons/save.svg" alt="Save" style={{ width: "1rem", height: "1rem", marginRight: "0.4rem", verticalAlign: "-2px" }} />
+            <img src="/icons/save.svg" alt="Save" style={{ width: "1.1rem", height: "1.1rem", marginRight: "0.4rem", verticalAlign: "-2px" }} />
             Save Changes
           </button>
 
           {/* {saved && (...)} only shows for 3 seconds after saving */}
           {saved && (
             <p style={{ color: "var(--accent)", marginTop: "0.75rem", fontWeight: 500, display: "flex", alignItems: "center", gap: "0.35rem" }}>
-              <img src="/icons/check.svg" alt="Saved" style={{ width: "0.85rem", height: "0.85rem" }} />
+              <img src="/icons/check.svg" alt="Saved" style={{ width: "1rem", height: "1rem" }} />
               Profile saved successfully!
             </p>
           )}

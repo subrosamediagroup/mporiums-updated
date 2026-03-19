@@ -263,7 +263,7 @@ function Navbar() {
                       onMouseEnter={(e) => e.currentTarget.style.background = "var(--muted)"}
                       onMouseLeave={(e) => e.currentTarget.style.background = "transparent"}
                     >
-                      <img src={item.icon} alt="" aria-hidden="true" style={{ width: "0.9rem", height: "0.9rem" }} />
+                      <img src={item.icon} alt="" aria-hidden="true" style={{ width: "1.05rem", height: "1.05rem" }} />
                       {item.label}
                     </Link>
                   ))}
@@ -283,7 +283,7 @@ function Navbar() {
                     onMouseEnter={(e) => e.currentTarget.style.background = "var(--muted)"}
                     onMouseLeave={(e) => e.currentTarget.style.background = "transparent"}
                   >
-                    <img src="/icons/log-out.svg" alt="" aria-hidden="true" style={{ width: "0.9rem", height: "0.9rem" }} />
+                    <img src="/icons/log-out.svg" alt="" aria-hidden="true" style={{ width: "1.05rem", height: "1.05rem" }} />
                     Sign Out
                   </button>
                 </div>

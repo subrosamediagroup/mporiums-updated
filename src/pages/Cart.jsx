@@ -123,7 +123,7 @@ function Cart() {
                           onClick={() => removeFromCart(item.id)}
                           aria-label="Remove item"
                         >
-                          <img src="/icons/trash-2.svg" alt="Remove" style={{ width: "0.95rem", height: "0.95rem" }} />
+                          <img src="/icons/trash-2.svg" alt="Remove" style={{ width: "1.1rem", height: "1.1rem" }} />
                         </button>
 
                         {/* Line total: price × quantity
@@ -172,7 +172,7 @@ function Cart() {
                     */}
                 {shipping === 0 && (
                   <p className="free-shipping-note">
-                    <img src="/icons/truck.svg" alt="Shipping" style={{ width: "0.9rem", height: "0.9rem", marginRight: "0.3rem", verticalAlign: "-2px" }} />
+                    <img src="/icons/truck.svg" alt="Shipping" style={{ width: "1.05rem", height: "1.05rem", marginRight: "0.3rem", verticalAlign: "-2px" }} />
                     You qualify for free shipping!
                   </p>
                 )}
@@ -188,7 +188,7 @@ function Cart() {
                 </Link>
 
                 <div className="secure-note">
-                  <img src="/icons/shield.svg" alt="Secure" style={{ width: "0.9rem", height: "0.9rem", marginRight: "0.3rem", verticalAlign: "-2px" }} />
+                  <img src="/icons/shield.svg" alt="Secure" style={{ width: "1.05rem", height: "1.05rem", marginRight: "0.3rem", verticalAlign: "-2px" }} />
                   Secure checkout · Buyer protection included
                 </div>
               </div>

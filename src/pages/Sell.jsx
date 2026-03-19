@@ -191,7 +191,7 @@ function Sell() {
                   style={{ cursor: "pointer" }}
                 >
                   <span className="upload-icon">
-                    <img src="/icons/upload.svg" alt="Upload" style={{ width: "2rem", height: "2rem", opacity: 0.85 }} />
+                    <img src="/icons/upload.svg" alt="Upload" style={{ width: "2.2rem", height: "2.2rem", opacity: 0.85 }} />
                   </span>
                   <span className="upload-text">Click or drag to upload images</span>
                 </div>
@@ -221,7 +221,7 @@ function Sell() {
                         onClick={() => removeUploadedImage(i)}
                         aria-label="Remove image"
                       >
-                        <img src="/icons/x.svg" alt="Remove" style={{ width: "0.7rem", height: "0.7rem" }} />
+                        <img src="/icons/x.svg" alt="Remove" style={{ width: "0.9rem", height: "0.9rem" }} />
                       </button>
                     </div>
                   ))}

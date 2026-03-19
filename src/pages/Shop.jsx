@@ -228,7 +228,7 @@ function Shop() {
                 onClick={clearFilters}
                 style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "0.35rem" }}
               >
-                <img src="/icons/x.svg" alt="Clear" style={{ width: "0.8rem", height: "0.8rem" }} />
+                <img src="/icons/x.svg" alt="Clear" style={{ width: "1rem", height: "1rem" }} />
                 Clear Filters
               </button>
             )}

@@ -128,7 +128,7 @@ function SellerDashboard() {
             marginBottom: "1.5rem", flexWrap: "wrap", gap: "0.5rem",
           }}>
             <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
-              <img src="/icons/dollar-sign.svg" alt="Payout" style={{ width: "1.1rem", height: "1.1rem" }} />
+              <img src="/icons/dollar-sign.svg" alt="Payout" style={{ width: "1.25rem", height: "1.25rem" }} />
               <span style={{ fontWeight: 600, fontSize: "0.9rem", color: "#3B6D11" }}>
                 ${STATS.pendingPayout.toFixed(2)} pending payout
               </span>
@@ -346,7 +346,7 @@ function SellerDashboard() {
                       <img
                         src={payout.status === "paid" ? "/icons/check-circle.svg" : "/icons/loader.svg"}
                         alt={payout.status === "paid" ? "Paid" : "Pending"}
-                        style={{ width: "0.75rem", height: "0.75rem" }}
+                        style={{ width: "0.9rem", height: "0.9rem" }}
                       />
                       {payout.status === "paid" ? "Paid" : "Pending"}
                     </span>

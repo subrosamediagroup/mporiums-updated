@@ -101,7 +101,7 @@ function Checkout() {
               <h2 className="form-card-title">Payment</h2>
               <hr className="separator" />
               <div className="info-box">
-                <img src="/icons/credit-card.svg" alt="Payment" style={{ width: "1rem", height: "1rem", flexShrink: 0 }} />
+                <img src="/icons/credit-card.svg" alt="Payment" style={{ width: "1.15rem", height: "1.15rem", flexShrink: 0 }} />
                 <div>
                   <p className="info-box-title">Secure Card Payment via Stripe</p>
                   <p className="text-muted text-xs">
@@ -168,7 +168,7 @@ function Checkout() {
               </button>
 
               <div className="secure-note">
-                <img src="/icons/shield.svg" alt="Secure" style={{ width: "0.9rem", height: "0.9rem", marginRight: "0.3rem", verticalAlign: "-2px" }} />
+                <img src="/icons/shield.svg" alt="Secure" style={{ width: "1.05rem", height: "1.05rem", marginRight: "0.3rem", verticalAlign: "-2px" }} />
                 Secure checkout · Buyer protection included
               </div>
             </div>

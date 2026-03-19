@@ -188,7 +188,7 @@ function OrderHistory() {
                           display: "inline-flex", alignItems: "center", gap: "0.3rem",
                           padding: "2px 8px", borderRadius: "20px",
                         }}>
-                          <img src={status.icon} alt={status.label} style={{ width: "0.75rem", height: "0.75rem" }} />
+                          <img src={status.icon} alt={status.label} style={{ width: "0.9rem", height: "0.9rem" }} />
                           {status.label}
                         </span>
                       </div>
@@ -239,7 +239,7 @@ function OrderHistory() {
                                     fontWeight: 700, flexShrink: 0,
                                   }}>
                                     {done ? (
-                                      <img src="/icons/check.svg" alt="Complete" style={{ width: "0.75rem", height: "0.75rem", filter: "brightness(0) invert(1)" }} />
+                                      <img src="/icons/check.svg" alt="Complete" style={{ width: "0.9rem", height: "0.9rem", filter: "brightness(0) invert(1)" }} />
                                     ) : i + 1}
                                   </div>
                                   {i < 2 && <div style={{ flex: 1, height: "2px", background: status.steps > i + 1 ? "var(--primary)" : "var(--border)" }} />}
@@ -316,24 +316,24 @@ function OrderHistory() {
                           onClick={() => markReviewed(order.id)}
                           style={{ display: "inline-flex", alignItems: "center", gap: "0.35rem" }}
                         >
-                          <img src="/icons/star.svg" alt="Review" style={{ width: "0.85rem", height: "0.85rem" }} />
+                          <img src="/icons/star.svg" alt="Review" style={{ width: "1rem", height: "1rem" }} />
                           Leave a Review
                         </Link>
                       )}
                       {order.status === "delivered" && order.reviewLeft && (
                         <span style={{ fontSize: "0.8rem", color: "var(--muted-foreground)", display: "flex", alignItems: "center", gap: "0.35rem" }}>
-                          <img src="/icons/check-circle.svg" alt="Submitted" style={{ width: "0.85rem", height: "0.85rem" }} />
+                          <img src="/icons/check-circle.svg" alt="Submitted" style={{ width: "1rem", height: "1rem" }} />
                           Review submitted
                         </span>
                       )}
                       {order.status !== "cancelled" && (
                         <Link to="/help#disputes" className="btn btn-outline btn-sm" style={{ display: "inline-flex", alignItems: "center", gap: "0.35rem" }}>
-                          <img src="/icons/info.svg" alt="Report" style={{ width: "0.85rem", height: "0.85rem" }} />
+                          <img src="/icons/info.svg" alt="Report" style={{ width: "1rem", height: "1rem" }} />
                           Report a Problem
                         </Link>
                       )}
                       <Link to={`/messages`} className="btn btn-outline btn-sm" style={{ display: "inline-flex", alignItems: "center", gap: "0.35rem" }}>
-                        <img src="/icons/message-square.svg" alt="Message" style={{ width: "0.85rem", height: "0.85rem" }} />
+                        <img src="/icons/message-square.svg" alt="Message" style={{ width: "1rem", height: "1rem" }} />
                         Message Seller
                       </Link>
                     </div>

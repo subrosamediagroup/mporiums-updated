@@ -243,7 +243,7 @@ function SellerProfile() {
                       {/* Star label */}
                       <span style={{ fontSize: "0.78rem", color: "var(--muted-foreground)", minWidth: "32px", textAlign: "right" }}>
                         {star}
-                        <img src="/icons/star.svg" alt="star" style={{ width: "0.7rem", height: "0.7rem", marginLeft: "0.2rem", verticalAlign: "-1px" }} />
+                        <img src="/icons/star.svg" alt="star" style={{ width: "0.85rem", height: "0.85rem", marginLeft: "0.2rem", verticalAlign: "-1px" }} />
                       </span>
                       {/* Progress bar */}
                       <div style={{
@@ -279,7 +279,7 @@ function SellerProfile() {
                   onClick={() => setShowReviewForm(true)}
                   style={{ display: "inline-flex", alignItems: "center", gap: "0.35rem" }}
                 >
-                  <img src="/icons/star.svg" alt="Review" style={{ width: "0.85rem", height: "0.85rem" }} />
+                  <img src="/icons/star.svg" alt="Review" style={{ width: "1rem", height: "1rem" }} />
                   Write a Review
                 </button>
               ) : (

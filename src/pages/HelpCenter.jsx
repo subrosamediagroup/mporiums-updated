@@ -329,7 +329,7 @@ function HelpCenter() {
                   "Take photos of the packed item before sealing and shipping",
                 ].map((tip, i) => (
                   <div key={i} style={{ display: "flex", gap: "0.5rem", marginBottom: "0.4rem" }}>
-                    <img src="/icons/check.svg" alt="" aria-hidden="true" style={{ width: "0.8rem", height: "0.8rem", marginTop: "0.2rem", flexShrink: 0 }} />
+                    <img src="/icons/check.svg" alt="" aria-hidden="true" style={{ width: "1rem", height: "1rem", marginTop: "0.12rem", flexShrink: 0 }} />
                     <p style={{ fontSize: "0.875rem", margin: 0 }}>{tip}</p>
                   </div>
                 ))}
