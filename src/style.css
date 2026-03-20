@@ -284,6 +284,15 @@ img { max-width: 100%; height: auto; display: block; }
   color: var(--foreground); 
 }
 
+@media (max-width: 1024px) {
+  .navbar .hide-mobile { display: none !important; }
+  .navbar .show-mobile { display: flex !important; }
+  .navbar-inner { height: 56px; gap: 0.5rem; }
+  .navbar-left { gap: 0.75rem; }
+  .navbar-right { gap: 0; }
+  .logo img { height: 24px; }
+}
+
 /* =============================================
    HERO
    ============================================= */
