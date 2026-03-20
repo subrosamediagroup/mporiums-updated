@@ -164,7 +164,7 @@ function Deals() {
           </div>
 
           <Link to={`/product/${dealOfDay.id}`} style={{ textDecoration: "none" }}>
-            <div style={{
+            <div className="deal-of-day-card" style={{
               display: "grid", gridTemplateColumns: "280px 1fr",
               background: "var(--card)", border: "1.5px solid var(--primary)",
               borderRadius: "var(--radius)", overflow: "hidden",
@@ -188,7 +188,7 @@ function Deals() {
               </div>
 
               {/* Info */}
-              <div style={{ padding: "1.5rem" }}>
+              <div className="deal-of-day-info" style={{ padding: "1.5rem" }}>
                 <p style={{ fontSize: "0.8rem", color: "var(--muted-foreground)", marginBottom: "0.25rem" }}>
                   {dealOfDay.category}
                 </p>
@@ -198,7 +198,7 @@ function Deals() {
                 <p className="text-muted text-sm" style={{ marginBottom: "1rem", lineHeight: 1.6 }}>
                   {dealOfDay.description}
                 </p>
-                <div style={{ display: "flex", alignItems: "baseline", gap: "0.75rem", marginBottom: "1rem" }}>
+                <div className="deal-of-day-price-row" style={{ display: "flex", alignItems: "baseline", gap: "0.75rem", marginBottom: "1rem" }}>
                   <span style={{ fontSize: "1.75rem", fontWeight: 700, color: "var(--primary)", fontFamily: "var(--font-display)" }}>
                     ${dealOfDay.price.toLocaleString()}
                   </span>
@@ -213,7 +213,7 @@ function Deals() {
                     Save ${(dealOfDay.originalPrice - dealOfDay.price).toLocaleString()}
                   </span>
                 </div>
-                <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                <div className="deal-of-day-seller-row" style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
                   <div style={{
                     width: "1.75rem", height: "1.75rem", borderRadius: "50%",
                     background: "var(--secondary)", display: "flex",
@@ -314,7 +314,7 @@ function Deals() {
                 to={`/product/${deal.id}`}
                 style={{ textDecoration: "none" }}
               >
-                <div style={{
+                <div className="deal-row-card" style={{
                   display: "flex", gap: "1rem", alignItems: "center",
                   background: "var(--card)", border: "0.5px solid var(--border)",
                   borderRadius: "var(--radius)", padding: "1rem",
@@ -322,7 +322,7 @@ function Deals() {
                   flexWrap: "wrap",
                 }}>
                   {/* Image */}
-                  <div style={{
+                  <div className="deal-row-image" style={{
                     width: "80px", height: "80px", borderRadius: "8px",
                     overflow: "hidden", flexShrink: 0, background: "var(--muted)",
                     position: "relative",
@@ -339,7 +339,7 @@ function Deals() {
                   </div>
 
                   {/* Info */}
-                  <div style={{ flex: 1, minWidth: 0 }}>
+                  <div className="deal-row-info" style={{ flex: 1, minWidth: 0 }}>
                     <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.2rem", flexWrap: "wrap" }}>
                       <span style={{
                         fontSize: "0.7rem", fontWeight: 600,
@@ -358,7 +358,7 @@ function Deals() {
                   </div>
 
                   {/* Price */}
-                  <div style={{ textAlign: "right", flexShrink: 0 }}>
+                  <div className="deal-row-price" style={{ textAlign: "right", flexShrink: 0 }}>
                     <div style={{ fontWeight: 700, fontSize: "1.1rem", color: "var(--primary)" }}>
                       ${deal.price.toLocaleString()}
                     </div>
@@ -371,7 +371,7 @@ function Deals() {
                   </div>
 
                   {/* Countdown */}
-                  <div style={{ flexShrink: 0 }}>
+                  <div className="deal-row-timer" style={{ flexShrink: 0 }}>
                     <CountdownTimer hours={deal.endsIn} label="Ends:" />
                   </div>
                 </div>

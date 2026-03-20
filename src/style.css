@@ -1235,6 +1235,34 @@ img { max-width: 100%; height: auto; display: block; }
   
   /* Info box */
   .info-box { gap: 0.5rem; padding: 0.75rem; }
+
+  /* Deals page */
+  .deal-of-day-card {
+    grid-template-columns: 1fr !important;
+  }
+  .deal-of-day-info {
+    padding: 1rem !important;
+  }
+  .deal-of-day-price-row {
+    flex-wrap: wrap;
+    gap: 0.5rem !important;
+  }
+  .deal-of-day-seller-row {
+    flex-wrap: wrap;
+  }
+  .deal-row-card {
+    align-items: flex-start !important;
+    gap: 0.75rem !important;
+  }
+  .deal-row-info {
+    width: calc(100% - 92px);
+    min-width: 0;
+  }
+  .deal-row-price,
+  .deal-row-timer {
+    width: 100%;
+    text-align: left !important;
+  }
 }
 
 @media (max-width: 480px) {
