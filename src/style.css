@@ -633,8 +633,9 @@ img { max-width: 100%; height: auto; display: block; }
 .dark .product-description { color: hsla(0,0%,95%,0.8); }
 
 .product-actions { 
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
   gap: 0.75rem; 
   margin-top: 1.5rem;
   width: 100%;
@@ -644,8 +645,12 @@ img { max-width: 100%; height: auto; display: block; }
   justify-content: center;
   padding: 0.625rem 0.75rem;
   min-height: 56px;
-  flex: 0 0 auto;
-  white-space: nowrap;
+  min-width: 0;
+  flex: 1 1 0;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  text-align: center;
+  line-height: 1.2;
 }
 .product-actions .btn img {
   width: 1.25rem !important;
@@ -1081,7 +1086,7 @@ img { max-width: 100%; height: auto; display: block; }
   .product-price { font-size: clamp(1.5rem, 2.5vw, 1.75rem); margin-top: 0.5rem; }
   .product-thumbs { gap: 0.5rem; max-width: 100%; width: 100%; overflow-x: auto; }
   .product-thumb { width: 4rem; height: 4rem; min-width: 4rem; flex-shrink: 0; }
-  .product-actions { grid-template-columns: 1fr; gap: 0.5rem; width: 100%; }
+  .product-actions { gap: 0.5rem; width: 100%; }
   .product-actions .btn { min-width: 0; min-height: 52px; }
   
   /* Cart Layout */
@@ -1367,7 +1372,7 @@ img { max-width: 100%; height: auto; display: block; }
   /* Buttons */
   .btn { min-height: 44px; }
   .btn-lg { min-height: 48px; }
-  .product-actions { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .product-actions { gap: 0.625rem; }
   .product-actions .btn { min-height: 54px; }
   
   /* Search */
@@ -1383,10 +1388,6 @@ img { max-width: 100%; height: auto; display: block; }
   .help-contact-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .product-actions { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 /* ── LARGE DEVICES (769px+) ── */
