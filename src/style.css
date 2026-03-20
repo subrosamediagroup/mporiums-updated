@@ -1028,7 +1028,7 @@ img { max-width: 100%; height: auto; display: block; }
   .hero-desc { font-size: 0.95rem; margin-bottom: 1.25rem; }
   
   /* Search bar */
-  .search-bar, .hero-search input { display: none !important; }
+  .search-bar { display: none !important; }
   .mobile-search { margin-bottom: 0.75rem; }
   .mobile-search input { font-size: 0.9rem; padding: 0.5rem 2rem; }
   
