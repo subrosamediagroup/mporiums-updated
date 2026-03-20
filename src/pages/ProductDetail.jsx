@@ -255,7 +255,7 @@ function ProductDetail() {
               {/* ADD TO CART
                    */}
               <button
-                className="btn btn-primary btn-sm btn-flex"
+                className="btn btn-primary btn-sm"
                 onClick={handleAddToCart}
               >
                 <img src="/icons/shopping-cart-white.svg" alt="Cart" style={{ width: "2rem", height: "2rem" }} />
