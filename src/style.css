@@ -641,7 +641,8 @@ img { max-width: 100%; height: auto; display: block; }
   overflow-x: auto;
 }
 .product-actions .btn {
-  flex: 0 0 auto;
+  flex: 1 1 0;
+  min-width: 120px;
   white-space: nowrap;
 }
 
