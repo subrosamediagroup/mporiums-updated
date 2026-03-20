@@ -642,19 +642,31 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .product-actions .btn {
   width: 100%;
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
+  gap: 0.625rem;
   padding: 0.625rem 0.75rem;
   min-height: 56px;
   min-width: 0;
   flex: 1 1 0;
-  white-space: normal;
-  overflow-wrap: anywhere;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   text-align: center;
-  line-height: 1.2;
+  line-height: 1;
+}
+.product-actions .btn .btn-label {
+  display: block;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .product-actions .btn img {
-  width: 1.25rem !important;
-  height: 1.25rem !important;
+  width: 1.625rem !important;
+  height: 1.625rem !important;
+  flex-shrink: 0;
 }
 
 /* Seller Card */

@@ -260,7 +260,7 @@ function ProductDetail() {
               >
                 <img src="/icons/shopping-cart-white.svg" alt="Cart" style={{ width: "3rem", height: "3rem" }} />
                 {/* Show "Added!" briefly after clicking, then revert */}
-                {addedToCart ? "Added!" : "Add to Cart"}
+                <span className="btn-label">{addedToCart ? "Added!" : "Add to Cart"}</span>
               </button>
 
               {/* MAKE OFFER
@@ -270,17 +270,17 @@ function ProductDetail() {
                 onClick={openOfferModal}
               >
                 <img src="/icons/message-square.svg" alt="Message" style={{ width: "3rem", height: "3rem" }} />
-                Make Offer
+                <span className="btn-label">Make Offer</span>
               </button>
 
               <button className="btn btn-outline btn-sm btn-blue-hover">
                 <img src="/icons/heart.svg" alt="Save" style={{ width: "3rem", height: "3rem" }} />
-                Save
+                <span className="btn-label">Save</span>
               </button>
 
               <button className="btn btn-outline btn-sm btn-blue-hover">
                 <img src="/icons/share-2.svg" alt="Share" style={{ width: "3rem", height: "3rem" }} />
-                Share
+                <span className="btn-label">Share</span>
               </button>
             </div>
           </div>
