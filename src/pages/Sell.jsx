@@ -42,7 +42,19 @@ function Sell() {
   const [sellDescription, setSellDescription] = useState("");
  
   const [sellerType, setSellerType] = useState("standard");
-  const { isLoggedIn } = useAuth();
+  const { user, isLoggedIn } = useAuth();
+
+  const sellerDisplayName = user?.displayName || user?.name || (user?.email ? user.email.split("@")[0] : "Guest");
+  const sellerSubtitle = isLoggedIn
+    ? user?.email || "Signed in"
+    : "Sign in to build your reputation";
+  const sellerAvatarLabel = (sellerDisplayName || "GU")
+    .split(" ")
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0])
+    .join("")
+    .toUpperCase();
 
   const fileInputRef = useRef(null);
 
@@ -325,11 +337,11 @@ function Sell() {
               <h3 className="filter-title">Your Seller Profile</h3>
               <div className="seller-info">
                 <div className="seller-avatar">
-                  <img src="/icons/user-transparent.svg" alt="User Avatar" style={{ width: "2rem", height: "2rem" }} />
+                  {sellerAvatarLabel}
                 </div>
                 <div>
-                  <p className="seller-name">Guest</p>
-                  <p className="text-muted text-xs">Sign in to build your reputation</p>
+                  <p className="seller-name">{sellerDisplayName}</p>
+                  <p className="text-muted text-xs">{sellerSubtitle}</p>
                 </div>
               </div>
             </div>
