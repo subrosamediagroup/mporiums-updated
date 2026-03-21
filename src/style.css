@@ -1217,17 +1217,13 @@ img { max-width: 100%; height: auto; display: block; }
     top: auto !important;
   }
   .help-sidebar-card {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: minmax(150px, 1fr);
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior-x: contain;
+    display: block;
+    overflow: visible;
   }
   .help-sidebar-card button {
+    width: 100%;
     min-height: 52px;
-    white-space: nowrap;
+    white-space: normal;
   }
   .help-card-grid,
   .help-policy-grid,
