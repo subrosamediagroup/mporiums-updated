@@ -266,14 +266,14 @@ function ProductDetail() {
               {/* MAKE OFFER
                   */}
               <button
-                className="btn btn-outline btn-sm btn-blue-hover"
+                className="btn btn-outline btn-sm btn-blue-hover btn-flex"
                 onClick={openOfferModal}
               >
                 <img src="/icons/message-square.svg" alt="Message" style={{ width: "2rem", height: "2rem" }} />
                 Make Offer
               </button>
 
-              <button className="btn btn-outline btn-sm btn-blue-hover">
+              <button className="btn btn-outline btn-sm btn-blue-hover btn-flex">
                 <img src="/icons/heart.svg" alt="Save" style={{ width: "2rem", height: "2rem" }} />
                 Save
               </button>
