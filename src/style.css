@@ -703,7 +703,8 @@ img { max-width: 100%; height: auto; display: block; }
   flex: 1 1 150px;
   min-width: 150px;
 }
-.help-field input {
+.help-field input,
+.help-search input {
   width: 100%;
   padding: 0.75rem 1rem;
   border: 2px solid var(--border);
@@ -717,6 +718,12 @@ img { max-width: 100%; height: auto; display: block; }
   transition: border-color 0.2s, box-shadow 0.2s;
   -webkit-appearance: none;
   appearance: none;
+}
+
+.help-field input:focus,
+.help-search input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px hsla(0, 78%, 50%, 0.15);
 }
 
 .help-field input:focus {
