@@ -156,7 +156,7 @@ img { max-width: 100%; height: auto; display: block; }
    BUTTONS
    ============================================= */
 .btn {
-  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.2rem;
   padding: 0.625rem 1.25rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500;
   border: none; border-radius: var(--radius); cursor: pointer;
   transition: background-color 0.2s, opacity 0.2s, box-shadow 0.2s, transform 0.15s;
