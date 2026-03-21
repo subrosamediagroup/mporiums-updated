@@ -66,7 +66,7 @@ function Footer() {
               <li><Link to="/help">Help Center</Link></li>
               <li><Link to="/help#buyer-protection">Buyer Protection</Link></li>
               <li><Link to="/help#shipping">Shipping Info</Link></li>
-              <li><Link to="/help#disputes">Returns</Link></li>
+              <li><Link to="/help#returns">Returns</Link></li>
             </ul>
           </div>
 

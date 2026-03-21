@@ -19,8 +19,8 @@
 //   - Contact support button at the bottom
 // ============================================================
 
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 // ── Fee calculator — same logic as Sell.jsx ─────────────────
 function calcFees(price, type) {
@@ -100,6 +100,7 @@ const SECTIONS = [
 const FEE_HEADERS = ["Fee type", "Standard Seller", "Preferred Seller", "Max"];
 
 function HelpCenter() {
+  const location = useLocation();
 
   const [activeSection, setActiveSection] = useState("buyer-protection");
   const [faqSearch, setFaqSearch]         = useState("");
@@ -109,6 +110,24 @@ function HelpCenter() {
   const [calcPrice, setCalcPrice]       = useState("");
   const [calcType, setCalcType]         = useState("standard");
   const fees = calcFees(calcPrice, calcType);
+
+  useEffect(() => {
+    const hash = location.hash.replace("#", "");
+
+    if (!hash) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      setActiveSection("buyer-protection");
+      return;
+    }
+
+    const targetId = hash === "returns" ? "disputes" : hash;
+    const el = document.getElementById(targetId);
+
+    if (el) {
+      setActiveSection(targetId);
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [location.pathname, location.hash]);
 
   // Scroll to a section and update active state
   function scrollTo(id) {
@@ -469,6 +488,7 @@ function HelpCenter() {
                 SECTION 4 — DISPUTES & RETURNS
                 ════════════════════════════════════════════════ */}
             <section id="disputes" style={sectionStyle}>
+              <div id="returns" style={{ position: "relative", top: "-80px" }} aria-hidden="true" />
               <h2 style={headingStyle}>⚖️ Disputes & Returns</h2>
               <p className="text-muted" style={{ marginBottom: "1.5rem" }}>
                 We aim to resolve all disputes fairly and quickly for both buyers and sellers.
