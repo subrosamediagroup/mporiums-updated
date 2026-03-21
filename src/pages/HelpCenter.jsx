@@ -620,14 +620,14 @@ function HelpCenter() {
                   { title: "Report a problem", desc: "Have an issue with an order? Open a dispute from your order history.", icon: "🚨", action: "Order history", link: "/orders" },
                   { title: "Email support", desc: "Reach our support team at support@mporiums.com. We respond within 24 hours.", icon: "📧", action: "Send email", link: "mailto:support@mporiums.com" },
                 ].map((item) => (
-                  <div key={item.title} style={cardStyle}>
+                  <div key={item.title} style={{ ...cardStyle, display: "flex", flexDirection: "column" }}>
                     <div style={{ fontSize: "1.5rem", marginBottom: "0.5rem" }}>{item.icon}</div>
                     <h4 style={{ fontWeight: 600, fontSize: "0.875rem", marginBottom: "0.3rem" }}>{item.title}</h4>
                     <p className="text-muted text-sm" style={{ lineHeight: 1.5, marginBottom: "0.75rem" }}>{item.desc}</p>
                     {item.link.startsWith("mailto") ? (
-                      <a href={item.link} className="link-primary" style={{ fontSize: "0.85rem" }}>{item.action} →</a>
+                      <a href={item.link} className="link-primary" style={{ fontSize: "0.85rem", marginTop: "auto" }}>{item.action} →</a>
                     ) : (
-                      <Link to={item.link} className="link-primary" style={{ fontSize: "0.85rem" }}>{item.action} →</Link>
+                      <Link to={item.link} className="link-primary" style={{ fontSize: "0.85rem", marginTop: "auto" }}>{item.action} →</Link>
                     )}
                   </div>
                 ))}
