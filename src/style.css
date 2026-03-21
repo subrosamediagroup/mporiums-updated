@@ -291,6 +291,14 @@ img { max-width: 100%; height: auto; display: block; }
   .navbar-left { gap: 0.75rem; }
   .navbar-right { gap: 0; }
   .logo img { height: 24px; }
+
+  /* Add these */
+  body {
+    padding-top: 56px;
+  }
+  .page-main {
+    min-height: calc(100vh - 56px);
+  }
 }
 
 /* =============================================
